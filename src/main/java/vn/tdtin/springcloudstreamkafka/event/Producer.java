@@ -21,6 +21,7 @@ public class Producer implements Input{
         this.source = source;
     }
 
+    @Override
     public void sendMessage(String message) {
         LOGGER.info("SEND MESSAGE : {}", message);
         Message payload = Message.builder().message(message).id(UUID.randomUUID().toString())
